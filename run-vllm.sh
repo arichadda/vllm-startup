@@ -1,0 +1,1 @@
+docker run --runtime nvidia --gpus all     -v ~/.cache/huggingface:/root/.cache/huggingface     --env "HUGGING_FACE_HUB_TOKEN=${HUGGING_FACE_HUB_TOKEN}"     -p 8000:8000     --ipc=host     vllm/vllm-openai:v0.9.1      --model deepseek-ai/DeepSeek-R1-Distill-Qwen-7B --tensor-parallel-size 2 --gpu_memory_utilization 0.95 --max_model_len 50000
